@@ -1,59 +1,19 @@
 <template>
-  <div>
-    Desserts
-
-Waffle with Berries
-Waffle
-6.50
-Add to Cart
-
-Vanilla Bean Crème Brûlée
-Crème Brûlée
-7.00
-Add to Cart
-
-Macaron Mix of Five
-Macaron
-8.00
-Add to Cart
-
-Classic Tiramisu
-Tiramisu
-5.50
-Add to Cart
-
-Pistachio Baklava
-Baklava
-4.00
-Add to Cart
-
-Lemon Meringue Pie
-Pie
-5.00
-Add to Cart
-
-Red Velvet Cake
-Cake
-4.50
-Add to Cart
-
-Salted Caramel Brownie
-Brownie
-4.50
-Add to Cart
-
-Vanilla Panna Cotta
-Panna Cotta
-6.50
-Add to Cart
-
-Your Cart (<!-- Quantity -->)
-Your added items will appear here
+  <div v-for="(desert, index) in cartItems" :key="index">
+    <Cart 
+    :category="desert.category"
+    :name="desert.name" 
+    :price="desert.price"
+    :imgSrc="desert.image.desktop"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
+import cartData from '../data/data.json'
+import Cart from './Cart.vue';
 
-
+const cartItems = ref(cartData)
+onMounted(() => console.log("data", cartItems.value))
 </script>
-

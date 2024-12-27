@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <div>
         <div class="cart-item">
             <img :src="`${imgSrc}`" alt="Image">
             <AddToCartButton />
@@ -9,7 +9,7 @@
             <h3 class="name">{{ name }}</h3>
             <p class="price">${{ price.toFixed(2) }}</p>  
         </div>
-    </li>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -43,7 +43,7 @@ const props = defineProps({
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 250px;
+    max-width: 260px;
 }
 
 .cart-content {

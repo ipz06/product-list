@@ -48,15 +48,46 @@ body {
 
 button {
     all: unset;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
   
 .add-to-cart-button {
     border: 1px solid $rose900Lighter;
-    padding: 12px 25px;
+    padding: 12px 20px;
     border-radius: 30px;
     margin: auto;
     color: $rose900;
     font-weight: 600;
     margin-top: -25px;
     background-color: white;
+    width: 120px;
+    max-width: 120px;
+    position: relative;
+    &.active {
+        color: $rose50;
+        background-color: $red;
+    }
+}
+
+.cart-title {
+    color: $red;
+    font-weight: 900;
+    margin-right: auto;
+    margin-left: 1.5rem;
+  }
+
+.cart-text {
+    color: $rose400;
+    font-weight: 600;
+}
+
+.title {
+    color: $rose900;
+    font-weight: 900;
+    font-size: xx-large;
 }

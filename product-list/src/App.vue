@@ -18,12 +18,13 @@ import DessertsLayout from './components/DessertsLayout.vue';
 
 <style scoped>
 .main {
-  padding: 1.5rem;
+  padding: 3.5rem;
   display: flex;
   justify-content: space-between;
-  gap: .5rem;
+  gap: 1.5rem;
   flex-wrap: nowrap;
   max-width: 100%;
+  margin: 1.5rem;
 }
 
 section {
@@ -36,5 +37,14 @@ section {
 
 .cart-wrapper{
   max-width: 30%;
+  background-color: white;
+  position: relative;
+  border-radius: 15px;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 </style>

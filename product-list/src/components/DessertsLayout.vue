@@ -1,5 +1,5 @@
 <template>
-  <h1>Desserts</h1>
+  <h1 class="title">Desserts</h1>
   <ul class="desserts-list">
     <li v-for="(desert, index) in cartItems" :key="index" class="dessert-item">
       <Cart 
@@ -33,9 +33,11 @@ onMounted(() => console.log("data", cartItems.value))
 .dessert-item {
   flex: 1 1 calc(33.33% - 1.5rem); /* Each item takes 1/3 of the container minus gap */
   box-sizing: border-box; /* Includes padding in width */
-  background: #f9f9f9; /* Optional: Add background */
-  padding: 1rem; /* Optional: Add padding */
   border-radius: 8px; /* Optional: Add rounded corners */
   text-align: center; /* Center content inside the item */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

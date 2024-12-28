@@ -7,6 +7,8 @@
       :name="desert.name" 
       :price="desert.price"
       :imgSrc="desert.image.desktop"
+      :item="desert"
+      :id="index.toString()"
       />
     </li>
   </ul>

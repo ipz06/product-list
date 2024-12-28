@@ -2,7 +2,7 @@
     <div>
         <div class="cart-item">
             <img :src="`${imgSrc}`" alt="Image">
-            <AddToCartButton />
+            <AddToCartButton :id="id" :item="item" />
         </div>
         <div class="cart-content">
             <p class="category"> {{ category }}</p>
@@ -33,9 +33,15 @@ const props = defineProps({
         type: String,
         required: true
     },
+    item: {
+        type: Object,
+    },
+    id: {
+        type: String,
+    },
   });
 
-  onMounted(() => console.log("props", props.name, props.price, `${props.imgSrc}`))
+  onMounted(() => console.log("props", props.name, props.item, props.id))
 </script>
 
 <style>

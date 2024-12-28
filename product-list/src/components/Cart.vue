@@ -6,7 +6,7 @@
             alt="Image"
             :class="{'in-cart' : isInCart}"
             >
-            <AddToCartButton :id="id" :item="item" @updateCartStatus="updateCartStatus"/>
+            <AddToCartButton :id="id" :item="item" />
         </div>
         <div class="cart-content">
             <p class="category"> {{ category }}</p>
@@ -21,6 +21,7 @@ import { onMounted, computed } from 'vue';
 import '../styles/styles.scss'
 import AddToCartButton from './AddToCartButton.vue';
 import { useCartStore } from '@/stores/cart';
+
 
 const props = defineProps({
     name: {

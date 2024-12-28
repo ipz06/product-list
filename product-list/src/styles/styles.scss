@@ -12,99 +12,148 @@ $rose900Lighter: hsla(14, 65%, 9%, 0.4);
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap');
 
 body {
-    font-family: 'Red Hat Text', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: $rose50;
-  }
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $rose50;
+}
 
-  ul {
-    list-style-type: none;
-  }
+ul {
+  list-style-type: none;
+}
 
 //   .main-wrapper {
-    
+
 //   }
 
 .category {
-    color: $rose900;
-    opacity: 40%;
-    margin: 0.2rem 0;
-    font-weight: 600;
+  color: $rose900;
+  opacity: 40%;
+  margin: 0.2rem 0;
+  font-weight: 600;
 }
-  
+
 .name {
-    color: $rose900;
-    opacity: 80%;
-    font-weight: 700;
-    margin: 0.2rem 0;
+  color: $rose900;
+  opacity: 80%;
+  font-weight: 700;
+  margin: 0.2rem 0;
 }
 
 .price {
-    color: $red;
-    font-weight: 700;
-    margin: 0.2rem 0;
+  color: $red;
+  font-weight: 700;
+  margin: 0.2rem 0;
 }
 
 button {
-    all: unset;
-    border: none;
-    background: none;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  all: unset;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-  
+
 .add-to-cart-button {
-    border: 1px solid $rose900Lighter;
-    padding: 12px 20px;
-    border-radius: 30px;
-    margin: auto;
-    color: $rose900;
-    font-weight: 600;
-    margin-top: -25px;
-    background-color: white;
-    width: 120px;
-    max-width: 120px;
-    position: relative;
-    &.active {
-        color: $rose50;
-        background-color: $red;
-    }
+  border: 1px solid $rose900Lighter;
+  padding: 12px 20px;
+  border-radius: 30px;
+  margin: auto;
+  color: $rose900;
+  font-weight: 600;
+  margin-top: -25px;
+  background-color: white;
+  width: 120px;
+  max-width: 120px;
+  position: relative;
+  &.active {
+    color: $rose50;
+    background-color: $red;
+  }
 }
 
 .cart-title {
-    color: $red;
-    font-weight: 900;
-    margin-right: auto;
-    margin-left: 1.5rem;
-  }
+  color: $red;
+  font-weight: 900;
+  margin-right: auto;
+  margin-left: 1.5rem;
+}
 
 .cart-text {
-    color: $rose400;
-    font-weight: 600;
+  color: $rose400;
+  font-weight: 600;
 }
 
 .title {
-    color: $rose900;
-    font-weight: 900;
-    font-size: xx-large;
+  color: $rose900;
+  font-weight: 900;
+  font-size: xx-large;
 }
 
 .confirm-order-button {
-    color: $rose50;
-    background-color: $red;
-    border-radius: 30px;
-    margin: auto;
-    font-weight: 600;
-    max-width: 100%;
-    padding: 12px 20px;
-
+  color: $rose50;
+  background-color: $red;
+  border-radius: 30px;
+  margin: auto;
+  font-weight: 600;
+  max-width: 100%;
+  padding: 12px 20px;
 }
 
+.in-cart {
+  border: 2px solid $red;
+  border-radius: 12px;
+}
 
-.in-cart{
- border: 2px solid $red;
- border-radius: 12px;   
+.item-for-order {
+  h4 {
+    color: $rose900;
+    font-weight: 900;
+  }
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  // max-width: 155px;
+  width: 100%;
+  gap: 1rem;
+  h4 {
+    color: $red;
+    font-weight: 900;
+    margin: unset;
+  }
+  .cart-item-price {
+    color: $rose400;
+    font-weight: 600;
+    text-align: center;
+    flex-wrap: nowrap;
+    // .cart-item-price-symbol {
+    //     color: $rose400;
+    //     font-weight: 400;
+    // }
+  }
+
+  .cart-item-fin-price {
+    color: $rose500;
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; /* Set a fixed size for the circle */
+  height: 20px;
+  border: 1px solid $rose300; /* White border for the circle */
+  border-radius: 50%; /* Makes the button a circle */
+  padding: 0; /* Remove extra padding */
+  cursor: pointer;
 }

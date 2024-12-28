@@ -27,7 +27,11 @@ export const useCartStore = defineStore('cart', () => {
     }
   }
 
+  const removeItem = (itemId: string) => {
+    cartItems.value = cartItems.value.filter(item => item.id !== itemId);
+  }
+
   const totalItems = computed(() => cartItems.value.reduce((sum, item) => sum + item.quantity, 0));
 
-  return { cartItems, addItem, updateItem, totalItems }
+  return { cartItems, addItem, updateItem, totalItems, removeItem }
 })

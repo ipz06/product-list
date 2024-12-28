@@ -1,5 +1,5 @@
 <template>
-    <button v-if="!isActive" class="add-to-cart-button" @click="activateCart">
+    <button v-if="!isActive" class="add-to-cart-button" @click="activateCart" >
         <img 
          :src="svgIcon" alt="Icon" 
          class="icon"
@@ -71,6 +71,11 @@ const decrement = () => {
     if (count.value > 0) count.value = count.value - 1;
     if (count.value === 0) isActive.value = false;
     cartStore.updateItem(foodItem.id, count.value)
+}
+
+const emitCartUpdate = () => {
+    const emit = defineEmits(['updateCartStatus']);
+    emit('updateCartStatus');
 }
 
 </script>

@@ -1,8 +1,12 @@
 <template>
     <div>
         <div class="cart-item">
-            <img :src="`${imgSrc}`" alt="Image">
-            <AddToCartButton :id="id" :item="item" />
+            <img 
+            :src="`${imgSrc}`" 
+            alt="Image"
+            :class="{'in-cart' : isInCart}"
+            >
+            <AddToCartButton :id="id" :item="item" @updateCartStatus="updateCartStatus"/>
         </div>
         <div class="cart-content">
             <p class="category"> {{ category }}</p>
@@ -13,9 +17,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 import '../styles/styles.scss'
 import AddToCartButton from './AddToCartButton.vue';
+import { useCartStore } from '@/stores/cart';
+
 const props = defineProps({
     name: {
       type: String,
@@ -40,6 +46,11 @@ const props = defineProps({
         type: String,
     },
   });
+
+  const cartStore = useCartStore()
+  const isInCart = computed(() => {
+    return cartStore.cartItems.some(cartItem => cartItem.id === props.id);
+});
 
   onMounted(() => console.log("props", props.name, props.item, props.id))
 </script>

@@ -91,3 +91,20 @@ button {
     font-weight: 900;
     font-size: xx-large;
 }
+
+.confirm-order-button {
+    color: $rose50;
+    background-color: $red;
+    border-radius: 30px;
+    margin: auto;
+    font-weight: 600;
+    max-width: 100%;
+    padding: 12px 20px;
+
+}
+
+
+.in-cart{
+ border: 2px solid $red;
+ border-radius: 12px;   
+}

@@ -31,7 +31,11 @@ export const useCartStore = defineStore('cart', () => {
     cartItems.value = cartItems.value.filter(item => item.id !== itemId);
   }
 
+  const clearCart = () => {
+    cartItems.value = [];
+  };
+
   const totalItems = computed(() => cartItems.value.reduce((sum, item) => sum + item.quantity, 0));
 
-  return { cartItems, addItem, updateItem, totalItems, removeItem }
+  return { cartItems, addItem, updateItem, totalItems, removeItem, clearCart }
 })

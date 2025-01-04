@@ -1,12 +1,12 @@
 <template>
-  <dialog ref="dialogRef">
+  <dialog ref="dialogRef" @close="handleClose">
     
     <slot />
   </dialog>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineExpose } from 'vue';
 
 const dialogRef = ref<HTMLDialogElement | null>(null);
 const showDialog = () => dialogRef.value?.showModal();
@@ -17,4 +17,8 @@ defineExpose({
   close: closeDialog,
 });
 
+const emit = defineEmits(['modal-closed']);
+const handleClose = () => {
+  emit('modal-closed');
+}
 </script>

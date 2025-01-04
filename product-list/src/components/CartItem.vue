@@ -1,14 +1,16 @@
 <template>
-  <li>
-    <h4>{{ name }}</h4>
-    <div class="cart-item-details">
-      <h4>{{ quantity }}x</h4>
-      <span class="cart-item-price">@ ${{ price.toFixed(2) }}</span>
-      <span class="cart-item-fin-price">${{ (quantity * price).toFixed(2) }}</span>
-      <button class="delete-button" @click="deleteItem">
-        <img :src="svgRemoveItemIcon" alt="Icon" />
-      </button>
+  <li class="cart-item-container">
+    <div>
+      <h4>{{ name }}</h4>
+      <div class="cart-item-details">
+        <h4>{{ quantity }}x</h4>
+        <span class="cart-item-price">@ ${{ price.toFixed(2) }}</span>
+        <span class="cart-item-fin-price">${{ (quantity * price).toFixed(2) }}</span>
+      </div>
     </div>
+    <button class="delete-button" @click="deleteItem">
+      <img :src="svgRemoveItemIcon" alt="Icon" />
+    </button>
   </li>
 </template>
 

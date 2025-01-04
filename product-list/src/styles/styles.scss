@@ -1,3 +1,4 @@
+
 $red: hsl(14, 86%, 42%);
 $green: hsl(159, 69%, 38%);
 
@@ -96,10 +97,17 @@ button {
   color: $rose50;
   background-color: $red;
   border-radius: 30px;
-  margin: auto;
   font-weight: 600;
-  max-width: 100%;
   padding: 12px 20px;
+  width: 85%;
+  margin-right: auto;
+  margin-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .in-cart {
@@ -111,6 +119,8 @@ button {
   h4 {
     color: $rose900;
     font-weight: 900;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -152,8 +162,41 @@ button {
   justify-content: center;
   width: 20px; /* Set a fixed size for the circle */
   height: 20px;
-  border: 1px solid $rose300; /* White border for the circle */
+  border: 1.5px solid $rose300;
   border-radius: 50%; /* Makes the button a circle */
-  padding: 0; /* Remove extra padding */
+  padding: 0;
   cursor: pointer;
+  margin-top: 1rem;
+}
+
+.cart-item-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 85%;
+  border-bottom: 1.5px solid $rose100;
+  padding-bottom: 1.2rem;
+}
+
+.carbon-neutral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.3rem;
+  width: 85%;
+  background-color: $rose100;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-right: auto;
+  margin-left: 1.5rem;
+  border-radius: 12px;
+  color: $rose500;
+  font-weight: 400;
+  .bold-text {
+    color: $rose900;
+  }
 }

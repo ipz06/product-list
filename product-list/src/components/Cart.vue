@@ -1,3 +1,4 @@
+// eslint-disable-next-line vue/multi-word-component-names
 <template>
   <div>
     <div class="cart-item">
@@ -20,12 +21,12 @@ import { useCartStore } from '@/stores/cart'
 import type { CartItem } from '@/types/CartItems'
 
 interface Props {
-  name?: string
-  price?: number
-  category?: string
-  imgSrc?: string
-  item?: CartItem
-  id?: string
+  name: string
+  price: number
+  category: string
+  imgSrc: string
+  item: CartItem
+  id: string
 }
 
 const props = defineProps<Props>()

@@ -4,9 +4,9 @@ export interface CartItem {
     name?: string;
     price: number;
     thumbnail?: string;
-    // image?: {
-    //     desktop: string,
-    //     mobile: string,
-    //     thumbnail: string,
-    // },
+    image?: {
+        desktop?: string,
+        mobile?: string,
+        thumbnail?: string,
+    },
   }

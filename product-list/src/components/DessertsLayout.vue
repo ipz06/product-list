@@ -15,12 +15,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import cartData from '../data/data.json'
 import Cart from './Cart.vue'
 
 const cartItems = ref(cartData)
-onMounted(() => console.log('data', cartItems.value))
 </script>
 
 <style>

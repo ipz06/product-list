@@ -28,16 +28,12 @@ const svgIconDecrement = ref(
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='2' fill='none' viewBox='0 0 10 2'%3E%3Cpath fill='%23fff' d='M0 .375h10v1.25H0V.375Z'/%3E%3C/svg%3E",
 )
 
-const props = defineProps<{
-  item: {
-    name: string
-    price: number
-    image: {
-      thumbnail: string
-    }
-  }
+interface Props {
+  item: CartItem
   id: string
-}>()
+}
+
+const props = defineProps<Props>()
 
 const isActive = ref(false)
 const count = ref(0)
@@ -47,10 +43,10 @@ const foodItem: Omit<CartItem, 'quantity'> = {
   id: props.id,
   name: props.item.name,
   price: props.item.price,
-  thumbnail: props.item.image.thumbnail,
+  thumbnail: props.item?.image?.thumbnail,
 }
 
-const isInCart = computed(() => {
+const isInCart = computed<boolean>(() => {
   const item = cartStore.cartItems.find((item) => item.id === props.id)
   if (item) {
     return true

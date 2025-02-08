@@ -17,27 +17,18 @@ import { computed } from 'vue'
 import '../styles/styles.scss'
 import AddToCartButton from './AddToCartButton.vue'
 import { useCartStore } from '@/stores/cart'
+import type { CartItem } from '@/types/CartItems'
 
-const props = defineProps({
-  name: {
-    type: String,
-  },
-  price: {
-    type: Number,
-  },
-  category: {
-    type: String,
-  },
-  imgSrc: {
-    type: String,
-  },
-  item: {
-    type: Object,
-  },
-  id: {
-    type: String,
-  },
-})
+interface Props {
+  name?: string
+  price?: number
+  category?: string
+  imgSrc?: string
+  item?: CartItem
+  id?: string
+}
+
+const props = defineProps<Props>()
 
 const cartStore = useCartStore()
 const isInCart = computed<boolean>(() => {

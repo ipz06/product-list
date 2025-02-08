@@ -25,7 +25,7 @@ interface Props {
   price: number
   category: string
   imgSrc: string
-  item: CartItem
+  item: Partial<CartItem>
   id: string
 }
 

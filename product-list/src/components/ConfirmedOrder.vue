@@ -27,10 +27,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-const props = defineProps({
+defineProps({
   totalPrice: {
     type: Number,
-    required: true,
   },
   cartItems: {
     type: Object,

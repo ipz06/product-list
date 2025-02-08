@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from 'vue'
+import { computed } from 'vue'
 import '../styles/styles.scss'
 import AddToCartButton from './AddToCartButton.vue'
 import { useCartStore } from '@/stores/cart'
@@ -21,19 +21,15 @@ import { useCartStore } from '@/stores/cart'
 const props = defineProps({
   name: {
     type: String,
-    required: true,
   },
   price: {
     type: Number,
-    required: true,
   },
   category: {
     type: String,
-    required: true,
   },
   imgSrc: {
     type: String,
-    required: true,
   },
   item: {
     type: Object,
@@ -44,11 +40,9 @@ const props = defineProps({
 })
 
 const cartStore = useCartStore()
-const isInCart = computed(() => {
+const isInCart = computed<boolean>(() => {
   return cartStore.cartItems.some((cartItem) => cartItem.id === props.id)
 })
-
-onMounted(() => console.log('props', props.name, props.item, props.id))
 </script>
 
 <style scoped>

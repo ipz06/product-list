@@ -18,14 +18,14 @@ import { computed } from 'vue'
 import '../styles/styles.scss'
 import AddToCartButton from './AddToCartButton.vue'
 import { useCartStore } from '@/stores/cart'
-import type { CartItem } from '@/types/CartItems'
+import type { Item } from '@/types/CartItems'
 
 interface Props {
   name: string
   price: number
   category: string
   imgSrc: string
-  item: Partial<CartItem>
+  item: Item
   id: string
 }
 

@@ -10,3 +10,15 @@ export interface CartItem {
     thumbnail?: string
   }
 }
+
+export interface Item {
+  id: string
+  name: string
+  price: number
+  thumbnail?: string
+  image?: {
+    desktop?: string
+    mobile?: string
+    thumbnail?: string
+  }
+}

@@ -24,7 +24,7 @@ interface Props {
   name: string
   price: number
   quantity: number
-  id?: string 
+  id: string
 }
 
 const props = defineProps<Props>()

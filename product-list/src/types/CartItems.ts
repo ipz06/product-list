@@ -1,7 +1,7 @@
 export interface CartItem {
     id: string;
     quantity: number;
-    name?: string;
+    name: string;
     price: number;
     thumbnail?: string;
     image?: {

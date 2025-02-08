@@ -1,5 +1,5 @@
 <template>
-  <h1 class="cart-title">Your Cart ({{ totalItems }})</h1>
+  <h2 class="cart-title">Your Cart ({{ totalItems }})</h2>
   <template v-if="totalItems === 0">
     <img :src="svgPath" alt="Image when the cart is empty" />
     <p class="cart-text">Your added items will appear here</p>
@@ -16,7 +16,7 @@
       />
     </ul>
     <div class="order-total">
-      <span>Order Total</span>
+      <h1>Order Total</h1>
       <h3>${{ totalPrice.toFixed(2) }}</h3>
     </div>
     <div class="carbon-neutral">
@@ -27,7 +27,7 @@
     <ModalDialog ref="dialogTarget" @modal-closed="startNewOrder">
       <ConfirmedOrder :totalPrice="totalPrice" :cartItems="cartItems" />
       <form method="dialog" @submit.prevent="startNewOrder">
-        <button type="submit">Start New Order</button>
+        <button type="submit" class="confirm-order-button">Start New Order</button>
       </form>
     </ModalDialog>
   </template>

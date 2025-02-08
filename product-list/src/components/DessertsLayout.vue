@@ -2,25 +2,25 @@
   <h1 class="title">Desserts</h1>
   <ul class="desserts-list">
     <li v-for="(desert, index) in cartItems" :key="index" class="dessert-item">
-      <Cart 
-      :category="desert.category"
-      :name="desert.name" 
-      :price="desert.price"
-      :imgSrc="desert.image.desktop"
-      :item="desert"
-      :id="index.toString()"
+      <Cart
+        :category="desert.category"
+        :name="desert.name"
+        :price="desert.price"
+        :imgSrc="desert.image.desktop"
+        :item="desert"
+        :id="index.toString()"
       />
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue'
 import cartData from '../data/data.json'
-import Cart from './Cart.vue';
+import Cart from './Cart.vue'
 
 const cartItems = ref(cartData)
-onMounted(() => console.log("data", cartItems.value))
+onMounted(() => console.log('data', cartItems.value))
 </script>
 
 <style>
@@ -30,6 +30,9 @@ onMounted(() => console.log("data", cartItems.value))
   gap: 1rem;
   padding: 0;
   margin: 0; /* Remove default list margins */
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 
 .dessert-item {
@@ -41,5 +44,9 @@ onMounted(() => console.log("data", cartItems.value))
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 0;
+    align-items: flex-start;
+  }
 }
 </style>

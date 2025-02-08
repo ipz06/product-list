@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import CartLayout from './components/CartLayout.vue';
-import DessertsLayout from './components/DessertsLayout.vue';
-
+import CartLayout from './components/CartLayout.vue'
+import DessertsLayout from './components/DessertsLayout.vue'
 </script>
 
 <template>
-    
   <main class="main">
     <section class="food-wrapper">
       <DessertsLayout />
@@ -25,6 +23,18 @@ import DessertsLayout from './components/DessertsLayout.vue';
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 1.5rem;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: 1rem;
+    gap: 1rem;
+    padding: 2rem;
+  }
 }
 
 section {
@@ -33,9 +43,12 @@ section {
 
 .food-wrapper {
   max-width: 70%;
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
 }
 
-.cart-wrapper{
+.cart-wrapper {
   max-width: 30%;
   background-color: white;
   position: relative;
@@ -46,5 +59,9 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  margin-bottom: 1.5rem;
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
 }
 </style>

@@ -1,4 +1,3 @@
-
 $red: hsl(14, 86%, 42%);
 $green: hsl(159, 69%, 38%);
 
@@ -118,7 +117,7 @@ button {
 .item-for-order {
   h4 {
     color: $rose900;
-    font-weight: 900;
+    font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -187,12 +186,8 @@ button {
   gap: 0.3rem;
   width: 85%;
   background-color: $rose100;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  margin-right: auto;
-  margin-left: 1.5rem;
+  padding: 1rem 0.3rem;
+  margin: 1rem auto 1.5rem 1.5rem;
   border-radius: 12px;
   color: $rose500;
   font-weight: 400;
